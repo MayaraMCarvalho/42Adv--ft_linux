@@ -6,7 +6,7 @@
 #    By: macarval <macarval@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/19 16:33:22 by macarval          #+#    #+#              #
-#    Updated: 2024/09/10 16:57:45 by macarval         ###   ########.fr        #
+#    Updated: 2024/09/10 17:10:56 by macarval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,7 +106,9 @@ git:
 			read msg; \
 			echo -n "\n"; \
 			echo "$(BBLUE)"; \
-			git commit -m "[$(NAME)]: $$status"
+			git commit -m "[$(NAME)] $$type: $$msg"; \
 			git push
+
+
 
 .PHONY:		all re clean fclean comp val git lazy install
